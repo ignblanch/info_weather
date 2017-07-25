@@ -5,11 +5,11 @@ angular.module('infoWeatherApp', ['ngRoute'])
     $routeProvider
       .when('/', {
         templateUrl: '../Views/search.html',
-        controller: 'SearchController'
+        //controller: 'SearchController'
      })
       .when('/results/:query', {
         templateUrl: '../Views/results.html',
-        controller: 'ResultsController'
+       //controller: 'ResultsController'
      })
 
   });

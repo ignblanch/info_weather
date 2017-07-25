@@ -1,11 +1,11 @@
-<header id="margin-search">
+<header id="margin-search" ng-controller="SearchController as searchCtrl">
         <div class="text-center container-fluid">
             <div class="row">
                 <h1 class="title">infoWeather</h1>
                 <p class="subtitle">instant city Weather search</p>
                 <div id="search" class="input-group">
-                    <input type="text" class="form-control" placeholder="enter a city" aria-describedby="basic-addon2">
-                    <span class="btn btn-info input-group-addon" id="basic-addon2">SEARCH</span>
+                    <input ng-model="searchCtrl.query" type="text" class="form-control" placeholder="enter a city" aria-describedby="basic-addon2">
+                    <span ng-click="searchCtrl.getQuery()" class="btn btn-info input-group-addon" id="basic-addon2">SEARCH</span>
                 </div>
             </div>
         </div>
