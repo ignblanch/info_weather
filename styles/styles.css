@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: block;
+    padding:5px;
 }
 
 
@@ -15,17 +16,22 @@ header {
     margin-top: 5%;
 }
 
+
 .icon {
     width: 20%;
 }
 
 .info-title {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #margin-search {
 margin-bottom: 5%;
-color: white;
+color: #2F2F2F;
+}
+
+#margin-search-results {
+    color: #2F2F2F;
 }
 
 .title {
@@ -34,4 +40,10 @@ color: white;
 
 .subtitle {
 	font-size: 25px;
+}
+
+#right-panel {
+    background-color: white;
+    height: 100%;
+    
 }
