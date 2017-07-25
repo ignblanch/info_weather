@@ -11,96 +11,12 @@
 </head>
 
 <body>
-    <header id="margin-search">
-        <div class="text-center container-fluid">
-            <div class="row">
-                <h1 class="title">infoWeather</h1>
-                <p class="subtitle">instant city Weather search</p>
-                <div id="search" class="input-group">
-                    <input type="text" class="form-control" placeholder="enter a city" aria-describedby="basic-addon2">
-                    <span class="btn btn-info input-group-addon" id="basic-addon2">SEARCH</span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h2 class="text-center">Paris 25º<img class="icon" src="img/10d.png" alt="..."></h2>
-                        <div class="row">
-                            <div class="text-center">
-                                <p class="info-title">cloudy</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">t.max: 25º</p>
-                                <p class="info-title">t.min: 18º</p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">Humidity: 58%</p>
-                                <p class="info-title">Preassure: 1015Hpa</p>
-                            </div>
-                        </div>
-                        <p><a href="#" class="btn btn-primary" role="button">Mas info</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h2 class="text-center">Lisboa 25º<img class="icon" src="img/10d.png" alt="..."></h2>
-                        <div class="row">
-                            <div class="text-center">
-                                <p class="info-title">cloudy</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">t.max: 25º</p>
-                                <p class="info-title">t.min: 18º</p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">Humidity: 58%</p>
-                                <p class="info-title">Preassure: 1015Hpa</p>
-                            </div>
-                        </div>
-                        <p><a href="#" class="btn btn-primary" role="button">Mas info</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h2 class="text-center">Berlin 25º<img class="icon" src="img/10d.png" alt="..."></h2>
-                        <div class="row">
-                            <div class="text-center">
-                                <p class="info-title">cloudy</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">t.max: 25º</p>
-                                <p class="info-title">t.min: 18º</p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">Humidity: 58%</p>
-                                <p class="info-title">Preassure: 1015Hpa</p>
-                            </div>
-                        </div>
-                        <p><a href="#" class="btn btn-primary" role="button">Mas info</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        
-    </div>
+
+    <ng-view></ng-view>
+
     <!-- AngularJS-->
-    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
     <!--Scripts-->
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/controllers.js"></script>
