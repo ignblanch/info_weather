@@ -4,12 +4,12 @@ angular.module('infoWeatherApp', ['ngRoute'])
 
     $routeProvider
       .when('/', {
-        templateUrl: '../Views/search.html',
-        //controller: 'SearchController'
+        templateUrl: '../templates/search.html',
+        //controller: 'SearchController as searchCtrl'
      })
       .when('/results/:query', {
-        templateUrl: '../Views/results.html',
-       //controller: 'ResultsController'
+        templateUrl: '../templates/results.html',
+       	//controller: 'ResultsController as resultsCtrl'
      })
 
   });
