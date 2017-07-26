@@ -22,4 +22,23 @@ angular.module('infoWeatherApp')
 				})
 
 			}
+
+			self.fiveDays = function(query, callback){
+
+				self.query = query;
+
+				var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + query + '&appid=68d52a9f0d93266ba323fbb2e254f29d&units=metric';
+
+				$http.get(url)
+				.then(function(response){
+
+					console.log("succes");
+					console.log(response);
+					callback(response);
+
+					}, function error(response){
+					console.error("ko" + response);
+				})
+			}
 	});
+

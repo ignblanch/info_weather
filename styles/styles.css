@@ -6,6 +6,8 @@ body {
     padding:5px;
 }
 
+
+
 a {
     text-decoration: none !important;
     color: inherit;
@@ -51,4 +53,24 @@ color: #2F2F2F;
     background-color: white;
     height: 100%;
     
+}
+
+#home-cloudy {
+    font-size: 28px;
+}
+
+#home-city-name {
+    background-color: #F7F7F7;
+  
+    font-size: 40px;
+}
+
+#home-more-info div p {
+    font-size: 18px;
+}
+
+.panel-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

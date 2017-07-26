@@ -20,69 +20,69 @@
             <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
                 <div class="thumbnail">
                     <div class="caption">
-                        <h2 class="text-center">Paris 25º<img class="icon" src="img/10d.png" alt="..."></h2>
+                        <h2 id="home-city-name" class="text-center">Paris {{ thumbCtrl.parisTemp }}º<img class="icon" src="{{ thumbCtrl.parisIconUrl }}" alt="..."></h2>
                         <div class="row">
                             <div class="text-center">
-                                <p class="info-title">cloudy</p>
+                                <p id="home-cloudy" class="info-title">{{ thumbCtrl.parisCloudy }}</p>
                             </div>
                         </div>
+                        <div id="home-more-info" class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <p class="info-title">Max: {{ thumbCtrl.parisT_max }}º</p>
+                                <p class="info-title">Min: {{ thumbCtrl.parisT_min }}º</p>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <p class="info-title">Humidity: {{ thumbCtrl.parisHumidity }}%</p>
+                                <p class="info-title">Pressure: {{ thumbCtrl.parisPressure }}Hpa</p>
+                            </div>
+                        </div>
+                        <p class="text-center"><a href="#!/results/paris" class="btn btn-primary" role="button">More info</a></p>
+                    </div>
+                </div>{{ thumbCtrl.temp }}º
+            </div>
+            <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h2 id="home-city-name" class="text-center">Londres {{ thumbCtrl.londonTemp }}º<img class="icon" src="{{ thumbCtrl.londonIconUrl }}" alt="..."></h2>
                         <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">t.max: 25º</p>
-                                <p class="info-title">t.min: 18º</p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">Humidity: 58%</p>
-                                <p class="info-title">Preassure: 1015Hpa</p>
+                            <div class="text-center">
+                                <p id="home-cloudy" class="info-title">{{ thumbCtrl.londonCloudy }}</p>
                             </div>
                         </div>
-                        <p><a href="#" class="btn btn-primary" role="button">Mas info</a></p>
+                        <div id="home-more-info" class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <p class="info-title">Max: {{ thumbCtrl.londonT_max }}º</p>
+                                <p class="info-title">Min: {{ thumbCtrl.londonT_min }}º</p>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <p class="info-title">Humidity: {{ thumbCtrl.londonHumidity }}%</p>
+                                <p class="info-title">Preassure: {{ thumbCtrl.londonPressure }}Hpa</p>
+                            </div>
+                        </div>
+                        <p class="text-center"><a href="#!/results/london" class="btn btn-primary" role="button">More info</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
                 <div class="thumbnail">
                     <div class="caption">
-                        <h2 class="text-center">Lisboa 25º<img class="icon" src="img/10d.png" alt="..."></h2>
+                        <h2 id="home-city-name" class="text-center">New York {{ thumbCtrl.newyorkTemp }}º<img class="icon" src="{{ thumbCtrl.newyorkIconUrl }}" alt="..."></h2>
                         <div class="row">
                             <div class="text-center">
-                                <p class="info-title">cloudy</p>
+                                <p id="home-cloudy" class="info-title">{{ thumbCtrl.newyorkCloudy }}</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div id="home-more-info" class="row">
                             <div class="col-md-6 col-xs-12">
-                                <p class="info-title">t.max: 25º</p>
-                                <p class="info-title">t.min: 18º</p>
+                                <p class="info-title">Max: {{ thumbCtrl.newyorkT_max }}º</p>
+                                <p class="info-title">Min: {{ thumbCtrl.newyorkT_min }}º</p>
                             </div>
                             <div class="col-md-6 col-xs-12">
-                                <p class="info-title">Humidity: 58%</p>
-                                <p class="info-title">Preassure: 1015Hpa</p>
+                                <p class="info-title">Humidity: {{ thumbCtrl.newyorkHumidity }}%</p>
+                                <p class="info-title">Preassure: {{ thumbCtrl.newyorkPressure }}Hpa</p>
                             </div>
                         </div>
-                        <p><a href="#" class="btn btn-primary" role="button">Mas info</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h2 class="text-center">Berlin 25º<img class="icon" src="img/10d.png" alt="..."></h2>
-                        <div class="row">
-                            <div class="text-center">
-                                <p class="info-title">cloudy</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">t.max: 25º</p>
-                                <p class="info-title">t.min: 18º</p>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <p class="info-title">Humidity: 58%</p>
-                                <p class="info-title">Preassure: 1015Hpa</p>
-                            </div>
-                        </div>
-                        <p><a href="#" class="btn btn-primary" role="button">Mas info</a></p>
+                        <p class="text-center"><a href="#!/results/new%20york" class="btn btn-primary" role="button">More info</a></p>
                     </div>
                 </div>
             </div>
