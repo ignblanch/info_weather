@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6 col-sm-12" ng-controller="SearchController as searchCtrl">
+    <div class="col-md-5 col-sm-12" ng-controller="SearchController as searchCtrl">
         <header id="margin-search-results">
             <div class="text-center container-fluid">
                 <h1 class="title"><a href="../index.html">infoWeather</a></h1>
@@ -11,35 +11,35 @@
             </div>
         </header>
     </div>
-    <div class="container fluid" ng-controller="ResultsController as resultsCtrl">
+    <div class="container-fluid" ng-controller="ResultsController as resultsCtrl">
         <div class="row">
-            <div id="info" class="col-md-6 col-sm-12">
+            <div class="col-md-7 col-sm-12">
                 <div class="thumbnail">
                     <div class="caption">
                         <h2 class="text-center">{{resultsCtrl.city.data.name}} {{resultsCtrl.Temp}}ºC<img class="icon" src="{{resultsCtrl.IconUrl}}" alt="..."></h2>
-                        <p class="info-title">{{ resultsCtrl.Cloudy }}</p>
+                        <p class="info-title text-center">{{ resultsCtrl.Cloudy }}</p>
                         <p class="info-title">Max: {{ resultsCtrl.T_max }}º</p>
                         <p class="info-title">Min: {{ resultsCtrl.T_min }}º</p>
                         <p class="info-title">Humidity: {{ resultsCtrl.Humidity }}%</p>
-                        <p class="info-title">Prassure: {{ resultsCtrl.Pressure }}Hpa</p>
+                        <p class="info-title">Air Preassure: {{ resultsCtrl.Pressure }}hPa</p>
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
+                            <div class="panel panel-info">
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                     <a ng-click="resultsCtrl.fiveDays()" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
-                                        7 days to go...
+                                        Next 6 days...
                                     </a>
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body" class="fiveDays">
                                         <div class="row">
-                                            <div class="col-md-2" ng-repeat="day in resultsCtrl.daysTime">
-                                                <div class="thumbnail" >
+                                            <div class="col-md-2" ng-repeat="day in resultsCtrl.daysTime|limitTo:6">
+                                                <div class="thumbnail text-center dayForecast" >
                                                     <img src="{{'http://openweathermap.org/img/w/' + day.weather['0'].icon + '.png'}}" />
+                                                    <p>{{ day.dt * 1000 | date : format:'EEEE, MMMM, d' }}</p>
                                                     <p>Max: {{ resultsCtrl.Math.floor(day.temp.max) }}</p>
                                                     <p>Min: {{ resultsCtrl.Math.floor(day.temp.min) }}</p>
-                                                    <p>Data: {{ day.dt * 1000 | date }}</p>
                                                 </div>
                                             </div>
                                         </div>

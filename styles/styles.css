@@ -1,3 +1,6 @@
+* {
+    font-weight: bold;
+}
 body {
     background-image: url('../img/fondo.jpg');
     background-repeat: no-repeat;
@@ -6,7 +9,10 @@ body {
     padding:5px;
 }
 
-
+.form-control {
+    font-size: 28px;
+    font-weight: initial;
+}
 
 a {
     text-decoration: none !important;
@@ -29,15 +35,16 @@ header {
 }
 
 .info-title {
-    font-size: 18px;
+    font-size: 25px;
 }
 
 #margin-search {
-margin-bottom: 5%;
-color: #2F2F2F;
+    margin-bottom: 5%;
+    color: #2F2F2F;
 }
 
 #margin-search-results {
+    margin-bottom: 5%;
     color: #2F2F2F;
 }
 
@@ -52,7 +59,6 @@ color: #2F2F2F;
 #right-panel {
     background-color: white;
     height: 100%;
-    
 }
 
 #home-cloudy {
@@ -61,7 +67,6 @@ color: #2F2F2F;
 
 #home-city-name {
     background-color: #F7F7F7;
-  
     font-size: 40px;
 }
 
@@ -73,4 +78,11 @@ color: #2F2F2F;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-weight: bold;
 }
+
+.dayForecast {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
