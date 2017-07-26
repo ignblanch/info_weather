@@ -1,11 +1,16 @@
 angular.module('infoWeatherApp')
 
-    .controller('SearchController', function($location) {
+    .controller('SearchController', function($location, WeatherService) {
         var self = this;
 
         self.query = '';
 
-        self.cities = ['atlanta', 'boston', 'madrid'];
+         self.loadCities = function(){
+             WeatherService.listCities(function(response){
+                self.allCities = response.data;
+                console.log(self.allCities);
+            });
+        }
 
         self.getQuery = function() {
             console.log('button clicked!');

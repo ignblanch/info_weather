@@ -23,6 +23,13 @@ angular.module('infoWeatherApp')
 
 			}
 
+			self.listCities = function (callback) {
+            	$http.get('../assets/spain_city_list.json')
+                	.then(function (response){
+                    	callback(response);
+            	})
+        	}
+
 			self.fiveDays = function(query, callback){
 
 				self.query = query;
