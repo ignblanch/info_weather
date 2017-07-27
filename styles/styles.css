@@ -124,3 +124,8 @@ header {
 .buttonMore {
     border-radius: 12px;
 }
+
+#mapButton {
+    float: right;
+    padding: 7px 6px;
+}
