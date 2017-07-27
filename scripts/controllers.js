@@ -1,18 +1,21 @@
 angular.module('infoWeatherApp')
 
-    .controller('SearchController', function($location, WeatherService) {
+    .controller('SearchController', function($location, $rootScope, WeatherService) {
         var self = this;
 
         self.query = '';
+        $rootScope.dataLoaded = false;
 
          self.loadCities = function(){
              WeatherService.listCities(function(response){
                 self.allCities = response.data;
                 console.log(self.allCities);
+                $rootScope.dataLoaded = true;
             });
         }
 
         self.getQuery = function() {
+             $rootScope.dataLoaded = false;
             console.log('button clicked!');
             var query = self.query;
             console.log(query);
@@ -21,14 +24,13 @@ angular.module('infoWeatherApp')
 
     })
 
-    .controller('ResultsController', function(WeatherService, $routeParams) {
+    .controller('ResultsController', function(WeatherService, $rootScope, $routeParams) {
         var self = this;
         self.Math = window.Math;
 
         var query = $routeParams.query;
 
         WeatherService.search(query, function(response) {
-
             self.city = response;
             self.Temp = Math.floor(response.data.main.temp);
             self.IconUrl = 'http://openweathermap.org/img/w/';
@@ -38,18 +40,16 @@ angular.module('infoWeatherApp')
             self.T_min = response.data.main.temp_min;
             self.Humidity = response.data.main.humidity;
             self.Pressure = response.data.main.pressure;
+            $rootScope.dataLoaded = true;
 
         });
 
         self.fiveDays = function() {
             var query = $routeParams.query;
-            
-            
-
             WeatherService.fiveDays(query, function(response) {
                 self.daysTime = response.data.list;
                 console.log(response)
-            
+
             })
         }
     })

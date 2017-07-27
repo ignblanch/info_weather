@@ -9,12 +9,21 @@
     <title>infoWeather</title>
     <!--Bootstrap-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
+    <!-- Theme SuperHero -->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/superhero/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <!--Styles -->
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>
 
+    <div ng-hide="dataLoaded" class="loading-data">
+        <p ><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i> Loading cities...</p>
+    </div>
     <ng-view></ng-view>
 
     <!--jQuery -->
