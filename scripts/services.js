@@ -7,7 +7,7 @@ angular.module('infoWeatherApp')
 
 			self.query = query;
 
-			var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + self.query + '&appid=68d52a9f0d93266ba323fbb2e254f29d&units=metric';
+			var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + self.query + '&appid=68d52a9f0d93266ba323fbb2e254f29d&units=metric';
 
 			$http.get(url)
 				.then(function(response){
@@ -34,7 +34,7 @@ angular.module('infoWeatherApp')
 
 				self.query = query;
 
-				var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + query + '&appid=68d52a9f0d93266ba323fbb2e254f29d&units=metric';
+				var url = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=' + query + '&appid=68d52a9f0d93266ba323fbb2e254f29d&units=metric';
 
 				$http.get(url)
 				.then(function(response){
