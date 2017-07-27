@@ -24,7 +24,7 @@ angular.module('infoWeatherApp')
 			}
 
 			self.listCities = function (callback) {
-            	$http.get('../assets/spain_city_list.json')
+            	$http.get('/assets/spain_city_list.json')
                 	.then(function (response){
                     	callback(response);
             	})
