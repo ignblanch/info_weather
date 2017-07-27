@@ -116,3 +116,11 @@ header {
 .results-container {
     height: 100vh;
 }
+
+.thumbnail {
+    border-radius: 10px;
+}
+
+.buttonMore {
+    border-radius: 12px;
+}
