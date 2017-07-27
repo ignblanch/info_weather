@@ -27,7 +27,7 @@
             <div class="col-md-7 col-sm-12">
                 <div class="thumbnail results-container">
                     <div class="caption">
-                        <h2 class="text-center">{{resultsCtrl.city.data.name}} {{resultsCtrl.Temp}}ºC<img class="icon" src="{{resultsCtrl.IconUrl}}" alt="..."></h2>
+                        <h2 id="resultsTitle" class="text-center">{{resultsCtrl.city.data.name}}<span id="countryCode"> ({{ resultsCtrl.city.data.sys.country }})<br> </span>{{resultsCtrl.Temp}}ºC<img class="icon" src="{{resultsCtrl.IconUrl}}" alt="..."></h2>
                         <p class="info-title text-center">{{ resultsCtrl.Cloudy }}</p>
                         <p class="info-title">Max: {{ resultsCtrl.T_max }}º</p>
                         <p class="info-title">Min: {{ resultsCtrl.T_min }}º</p>

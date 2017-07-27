@@ -129,3 +129,11 @@ header {
     float: right;
     padding: 7px 6px;
 }
+
+#countryCode {
+    font-size: 15px;
+}
+
+#resultsTitle {
+    font-size: 60px;
+}
