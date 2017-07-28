@@ -1,7 +1,7 @@
 #INFO WEATHER
 
-![screenshot] (img/Home.jpg)
-![screenshot] (img/herr.jpg)
+![screenshot] (/img/Home.jpg)
+![screenshot] (/img/herr.jpg)
 
 Front end project developed for the Web Developer Bootcamp at Skylab Coders. Summer 2017.
 
