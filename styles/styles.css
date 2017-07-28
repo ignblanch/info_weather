@@ -83,6 +83,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     font-weight: bold;
+
 }
 
 .dayForecast {
@@ -114,11 +115,12 @@ header {
 }
 
 .results-container {
-    height: 100vh;
+    height: 100%;
 }
 
 .thumbnail {
     border-radius: 10px;
+    background-color: rgba(84, 101, 117,0.75);
 }
 
 .buttonMore {
@@ -136,4 +138,8 @@ header {
 
 #resultsTitle {
     font-size: 60px;
+}
+
+#formResults {
+    display: inline;
 }

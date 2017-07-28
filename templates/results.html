@@ -2,9 +2,10 @@
         <p ><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i> Loading cities...</p>
     </div>
 <div class="row">
-    <div class="col-md-5 col-sm-12" ng-controller="SearchController as searchCtrl" data-ng-init="searchCtrl.loadCities()">
+    <div class="col-md-6 col-sm-12" ng-controller="SearchController as searchCtrl" data-ng-init="searchCtrl.loadCities()">
         <header id="margin-search-results">
             <div class="text-center container-fluid">
+                <form id="formResults" ng-submit="searchCtrl.getQuery()">
                 <h1 class="title"><a href="#!/">infoWeather</a></h1>
                 <p class="subtitle">instant city Weather search</p>
                 <div id="search" class="input-group">
@@ -18,13 +19,16 @@
                     </datalist>
 
                     <span ng-click="searchCtrl.getQuery()" class="btn btn-info input-group-addon" id="basic-addon2">SEARCH</span>
+                    </div>
+                    </form>
                 </div>
+                </header>
             </div>
-        </header>
-    </div>
+        
+    
     <div class="container-fluid" ng-controller="ResultsController as resultsCtrl">
         <div class="row">
-            <div class="col-md-7 col-sm-12">
+            <div class="col-md-6 col-sm-12">
                 <div class="thumbnail results-container">
                     <div class="caption">
                         <h2 id="resultsTitle" class="text-center">{{resultsCtrl.city.data.name}}<span id="countryCode"> ({{ resultsCtrl.city.data.sys.country }})<br> </span>{{resultsCtrl.Temp}}ºC<img class="icon" src="{{resultsCtrl.IconUrl}}" alt="..."></h2>
@@ -33,7 +37,7 @@
                         <p class="info-title">Min: {{ resultsCtrl.T_min }}º</p>
                         <p class="info-title">Humidity: {{ resultsCtrl.Humidity }}%</p>
                         <p class="info-title">Air Preassure: {{ resultsCtrl.Pressure }}hPa</p>
-                        <a id="mapButton" target="_blank" href="https://www.google.es/maps/place/{{resultsCtrl.city.data.name}}" class="btn btn-info">Vew Map</a>
+                        <a id="mapButton" target="_blank" href="https://www.google.es/maps/place/{{resultsCtrl.city.data.name}}" class="btn btn-info">View Map</a>
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-info">
                                 <div class="panel-heading" role="tab" id="headingOne">
@@ -62,4 +66,6 @@
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
